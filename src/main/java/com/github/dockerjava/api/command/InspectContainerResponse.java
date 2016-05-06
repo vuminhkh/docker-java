@@ -19,6 +19,7 @@ import com.github.dockerjava.api.model.VolumeBind;
 import com.github.dockerjava.api.model.VolumeBinds;
 import com.github.dockerjava.api.model.VolumeRW;
 import com.github.dockerjava.api.model.VolumesRW;
+import com.github.dockerjava.api.model.SwarmNode;
 import com.github.dockerjava.core.RemoteApiVersion;
 
 /**
@@ -64,6 +65,9 @@ public class InspectContainerResponse {
 
     @JsonProperty("Name")
     private String name;
+
+    @JsonProperty("Node")
+    private SwarmNode node;
 
     /**
      * @since {@link RemoteApiVersion#VERSION_1_17}
@@ -136,6 +140,10 @@ public class InspectContainerResponse {
 
     public String getResolvConfPath() {
         return resolvConfPath;
+    }
+
+    public SwarmNode getNode() {
+        return node;
     }
 
     @JsonIgnore
