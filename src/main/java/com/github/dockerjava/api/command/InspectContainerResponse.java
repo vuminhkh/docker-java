@@ -57,6 +57,9 @@ public class InspectContainerResponse {
     @JsonProperty("Id")
     private String id;
 
+    @JsonProperty("SizeRootFs")
+    private Integer sizeRootFs;
+
     @JsonProperty("Image")
     private String imageId;
 
@@ -104,6 +107,10 @@ public class InspectContainerResponse {
 
     public String getId() {
         return id;
+    }
+
+    public Integer getSizeRootFs() {
+        return  sizeRootFs;
     }
 
     public String getCreated() {
