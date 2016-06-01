@@ -209,10 +209,6 @@ public class NetworkSettings {
 
     @JsonIgnoreProperties(ignoreUnknown = true)
     public static class Network {
-
-        @JsonProperty("IPAMConfig")
-        private String ipamConfig;
-
         /**
          * @since {@link RemoteApiVersion#VERSION_1_22}
          */
